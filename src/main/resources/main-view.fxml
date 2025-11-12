@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fxdemo.controllers.MainController"
+            prefHeight="600.0" prefWidth="800.0">
+    <top>
+        <VBox style="-fx-background-color: #f8f9fa; -fx-border-color: #dee2e6; -fx-border-width: 0 0 1 0;">
+            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0"/>
+                </padding>
+                <Label text="Navegação:" style="-fx-font-weight: bold;"/>
+                <Button text="Texto" onAction="#abrirTelaTexto" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                <Button text="CRUD" onAction="#abrirTelaCRUD" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                <Button text="CSV" onAction="#abrirTelaCSV" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-size: 12px;"/>
+            </HBox>
+            <Label text="Telas" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 0 15 5 15;"/>
+        </VBox>
+    </top>
+</BorderPane>
+
