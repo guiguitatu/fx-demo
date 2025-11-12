@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.fxdemo.controllers.ButtonsController"
+      spacing="20.0"
+      style="-fx-background-color: #f8f9fa;">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Título da tela -->
+    <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="🎯 Demonstração de Botões Simples" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        <Separator/>
+        <Label text="Esta tela demonstra diferentes formas de conectar ações a botões no JavaFX." style="-fx-text-fill: #7f8c8d;"/>
+    </VBox>
+
+    <!-- Resultado central -->
+    <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="Resultado dos Cliques:" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblResultado" text="Clique nos botões abaixo..." style="-fx-font-size: 16px; -fx-padding: 10; -fx-background-color: #e9ecef; -fx-border-color: #ced4da; -fx-border-radius: 3;"/>
+    </VBox>
+
+    <!-- Botões coloridos -->
+    <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="Botões Coloridos (conectados via código Java):" style="-fx-font-weight: bold;"/>
+
+        <!-- Botão Vermelho -->
+        <HBox spacing="15.0" alignment="CENTER_LEFT">
+            <Button fx:id="btnVermelho" text="🔴 Vermelho" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-min-width: 120;"/>
+            <Label text="Status:"/>
+            <Label fx:id="lblStatusVermelho" text="Carregando..." style="-fx-font-weight: bold;"/>
+        </HBox>
+
+        <!-- Botão Verde -->
+        <HBox spacing="15.0" alignment="CENTER_LEFT">
+            <Button fx:id="btnVerde" text="🟢 Verde" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-min-width: 120;"/>
+            <Label text="Status:"/>
+            <Label fx:id="lblStatusVerde" text="Carregando..." style="-fx-font-weight: bold;"/>
+        </HBox>
+
+        <!-- Botão Azul -->
+        <HBox spacing="15.0" alignment="CENTER_LEFT">
+            <Button fx:id="btnAzul" text="🔵 Azul" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-min-width: 120;"/>
+            <Label text="Status:"/>
+            <Label fx:id="lblStatusAzul" text="Carregando..." style="-fx-font-weight: bold;"/>
+        </HBox>
+
+        <!-- Botão Amarelo -->
+        <HBox spacing="15.0" alignment="CENTER_LEFT">
+            <Button fx:id="btnAmarelo" text="🟡 Amarelo" style="-fx-background-color: #ffc107; -fx-text-fill: black; -fx-min-width: 120;"/>
+            <Label text="Status:"/>
+            <Label fx:id="lblStatusAmarelo" text="Carregando..." style="-fx-font-weight: bold;"/>
+        </HBox>
+    </VBox>
+
+    <!-- Botões de controle -->
+    <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="Botões de Controle (conectados via FXML):" style="-fx-font-weight: bold;"/>
+        <HBox spacing="10.0">
+            <Button fx:id="btnReset" text="🔄 Resetar Status" onAction="#onBtnResetClick" style="-fx-background-color: #6c757d; -fx-text-fill: white;"/>
+            <Button text="🎬 Demonstração Automática" onAction="#onBtnDemonstracaoClick" style="-fx-background-color: #17a2b8; -fx-text-fill: white;"/>
+        </HBox>
+    </VBox>
+
+    <!-- Explicação técnica -->
+    <VBox spacing="10.0" style="-fx-background-color: #fff3cd; -fx-padding: 15; -fx-border-color: #ffeaa7; -fx-border-radius: 5;">
+        <Label text="💡 Duas formas de conectar ações:" style="-fx-font-weight: bold; -fx-text-fill: #856404;"/>
+        <Separator/>
+
+        <VBox spacing="8.0">
+            <VBox spacing="3.0">
+                <Label text="🎨 Método 1 - Via Código Java:" style="-fx-font-weight: bold; -fx-text-fill: #856404;"/>
+                <Label text="• Botões coloridos usam setOnAction() no controller" style="-fx-text-fill: #856404;"/>
+                <Label text="• Conexão feita programaticamente no método initialize()" style="-fx-text-fill: #856404;"/>
+            </VBox>
+
+            <VBox spacing="3.0">
+                <Label text="📄 Método 2 - Via FXML:" style="-fx-font-weight: bold; -fx-text-fill: #856404;"/>
+                <Label text="• Botões de controle usam onAction=&quot;#methodName&quot; no FXML" style="-fx-text-fill: #856404;"/>
+                <Label text="• JavaFX conecta automaticamente aos métodos @FXML" style="-fx-text-fill: #856404;"/>
+            </VBox>
+        </VBox>
+    </VBox>
+
+    <!-- Demonstração de código -->
+    <VBox spacing="10.0" style="-fx-background-color: #f8f9fa; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="📋 Exemplos de Código:" style="-fx-font-weight: bold;"/>
+        <TabPane tabClosingPolicy="UNAVAILABLE" prefHeight="150.0">
+            <tabs>
+                <Tab text="Via Código Java">
+                    <Label text="btnVermelho.setOnAction(event -&gt; { ... });" style="-fx-font-family: 'Courier New'; -fx-font-size: 11px;"/>
+                </Tab>
+                <Tab text="Via FXML">
+                    <Label text="onAction=&quot;#onBtnResetClick&quot;" style="-fx-font-family: 'Courier New'; -fx-font-size: 11px;"/>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </VBox>
+</VBox>

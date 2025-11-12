@@ -24,6 +24,7 @@ Um sistema desktop moderno desenvolvido em JavaFX para gerenciamento de produtos
 - Navegação intuitiva entre módulos
 - Header dinâmico com controle de estados
 - Validações em tempo real
+- **Nova tela FX**: Demonstração completa dos componentes JavaFX mais utilizados
 
 ## 🏗️ Arquitetura
 
@@ -33,6 +34,7 @@ FXdemo/
 │   ├── MainController    # Navegação principal
 │   ├── CRUDController    # CRUD SQLite
 │   ├── CSVController     # CRUD CSV
+│   ├── FXController      # Demonstração de componentes
 │   └── HeaderController  # Controle de botões
 ├── dao/                  # Camada de acesso a dados
 │   ├── ProdutoDAO        # SQLite operations
@@ -43,6 +45,7 @@ FXdemo/
     ├── main-view.fxml    # Layout principal
     ├── crud-view.fxml    # Layout CRUD
     ├── csv-view.fxml     # Layout CSV
+    ├── fx-view.fxml      # Demonstração de componentes
     └── header-view.fxml  # Layout Header
 ```
 
@@ -82,10 +85,11 @@ FXdemo/
 ## 🎯 Como Usar
 
 1. **Inicie a aplicação** - Execute o comando Maven acima
-2. **Navegue entre módulos** - Use os botões "Texto", "CRUD" e "CSV" no topo
+2. **Navegue entre módulos** - Use os botões "Texto", "CRUD", "CSV" e "FX" no topo
 3. **CRUD SQLite** - Gerencie produtos no banco de dados
 4. **CRUD CSV** - Gerencie produtos em arquivos CSV
-5. **Texto** - Visualize conteúdo de exemplo
+5. **FX Components** - Demonstre os componentes mais utilizados do JavaFX
+6. **Texto** - Visualize conteúdo de exemplo
 
 ### Campos obrigatórios:
 - **Nome**: Texto não vazio
@@ -140,6 +144,45 @@ Mouse Logitech,25.90,50
 - **Confirmação de ações** destrutivas
 - **Importação de CSV** externos
 - **Persistência automática** de dados
+
+### 🎨 **Novas Telas de Demonstração**
+
+#### **Tela FX** - Componentes Completos
+Apresenta uma demonstração completa e interativa dos componentes JavaFX mais utilizados:
+
+#### **Tela Input+Botão** - Demonstração Simples
+Mostra como conectar um campo de texto a um botão que altera um label:
+
+#### **Tela Botões** - Controles Simples
+Demonstra diferentes formas de conectar ações a botões, com feedback visual lateral:
+
+#### **Funcionalidades das Telas:**
+
+#### Componentes Demonstrados:
+- **Labels**: Texto básico e estilizado
+- **Buttons**: Botões normais, desabilitados e estilizados
+- **TextFields**: Campos de texto, senhas, prompts e campos somente leitura
+- **TextArea**: Áreas de texto multilinha
+- **ComboBox**: Listas dropdown
+- **CheckBox**: Caixas de seleção múltipla
+- **RadioButton**: Seleção única com ToggleGroup
+- **ProgressBar/ProgressIndicator**: Barras de progresso
+- **Slider**: Controle deslizante
+- **DatePicker**: Seleção de datas
+- **ColorPicker**: Seleção de cores
+- **Spinner**: Controles numéricos
+- **TableView**: Tabelas com dados
+- **ListView**: Listas de itens
+- **Accordion**: Paineis expansíveis
+- **TabPane**: Abas organizacionais
+- **MenuBar**: Barras de menu
+- **ToolBar**: Barras de ferramentas
+
+#### Interatividade:
+- Todos os componentes respondem às interações do usuário
+- Resultados das ações são exibidos em tempo real
+- Demonstração animada de todos os componentes
+- Limpeza completa dos campos com um clique
 
 ## 🤝 Contribuição
 

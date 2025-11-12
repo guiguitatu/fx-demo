@@ -32,6 +32,21 @@ public class MainController {
         carregarTela("/csv-view.fxml");
     }
 
+    @FXML
+    private void abrirTelaFX() {
+        carregarTela("/fx-view.fxml");
+    }
+
+    @FXML
+    private void abrirTelaSimples() {
+        carregarTela("/simple-view.fxml");
+    }
+
+    @FXML
+    private void abrirTelaBotoes() {
+        carregarTela("/buttons-view.fxml");
+    }
+
     private void carregarTela(String fxmlPath) {
         try {
             FXMLLoader loader = new FXMLLoader(MainController.class.getResource(fxmlPath));

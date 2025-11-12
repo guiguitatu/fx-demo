@@ -11,15 +11,26 @@
             prefHeight="600.0" prefWidth="800.0">
     <top>
         <VBox style="-fx-background-color: #f8f9fa; -fx-border-color: #dee2e6; -fx-border-width: 0 0 1 0;">
-            <HBox spacing="10.0" alignment="CENTER_LEFT">
-                <padding>
-                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0"/>
-                </padding>
-                <Label text="Navegação:" style="-fx-font-weight: bold;"/>
-                <Button text="Texto" onAction="#abrirTelaTexto" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-size: 12px;"/>
-                <Button text="CRUD" onAction="#abrirTelaCRUD" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-size: 12px;"/>
-                <Button text="CSV" onAction="#abrirTelaCSV" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-size: 12px;"/>
-            </HBox>
+            <VBox spacing="5.0">
+                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                    <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0"/>
+                    </padding>
+                    <Label text="Navegação:" style="-fx-font-weight: bold;"/>
+                    <Button text="Texto" onAction="#abrirTelaTexto" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                    <Button text="CRUD" onAction="#abrirTelaCRUD" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                    <Button text="CSV" onAction="#abrirTelaCSV" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                    <Button text="FX" onAction="#abrirTelaFX" style="-fx-background-color: #6f42c1; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                </HBox>
+                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                    <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="0.0"/>
+                    </padding>
+                    <Label text="Simples:" style="-fx-font-weight: bold;"/>
+                    <Button text="Input+Botão" onAction="#abrirTelaSimples" style="-fx-background-color: #fd7e14; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                    <Button text="Botões" onAction="#abrirTelaBotoes" style="-fx-background-color: #20c997; -fx-text-fill: white; -fx-font-size: 12px;"/>
+                </HBox>
+            </VBox>
             <Label text="Telas" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 0 15 5 15;"/>
         </VBox>
     </top>

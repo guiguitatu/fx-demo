@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.fxdemo.controllers.SimpleController"
+      spacing="20.0"
+      style="-fx-background-color: #f8f9fa;">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Título da tela -->
+    <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="📝 Demonstração Simples de Input + Botão" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        <Separator/>
+        <Label text="Esta tela demonstra como o JavaFX conecta ações de botões a métodos do controller." style="-fx-text-fill: #7f8c8d;"/>
+    </VBox>
+
+    <!-- Texto que será alterado -->
+    <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="Texto Superior (será alterado pelo botão):" style="-fx-font-weight: bold;"/>
+        <Label fx:id="lblTextoSuperior" text="Carregando..." style="-fx-font-size: 16px; -fx-padding: 10; -fx-background-color: #e9ecef; -fx-border-color: #ced4da; -fx-border-radius: 3;"/>
+    </VBox>
+
+    <!-- Campo de entrada e botão -->
+    <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="Digite algo no campo abaixo:" style="-fx-font-weight: bold;"/>
+
+        <VBox spacing="10.0">
+            <TextField fx:id="txtInput" promptText="Digite seu texto aqui..." prefWidth="300.0"/>
+
+            <HBox spacing="10.0">
+                <Button fx:id="btnTrocarTexto" text="🔄 Trocar Texto Superior" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button text="🧹 Limpar" onAction="#onBtnLimparClick" style="-fx-background-color: #6c757d; -fx-text-fill: white;"/>
+            </HBox>
+        </VBox>
+    </VBox>
+
+    <!-- Explicação técnica -->
+    <VBox spacing="10.0" style="-fx-background-color: #e7f3ff; -fx-padding: 15; -fx-border-color: #b8daff; -fx-border-radius: 5;">
+        <Label text="💡 Como funciona:" style="-fx-font-weight: bold; -fx-text-fill: #004085;"/>
+        <Label fx:id="lblExplicacao" text="Explicação será carregada..." style="-fx-text-fill: #004085;"/>
+
+        <Separator/>
+
+        <VBox spacing="5.0">
+            <Label text="• O botão está conectado ao método 'setOnAction' no controller" style="-fx-text-fill: #004085;"/>
+            <Label text="• Quando clicado, o método lê o texto do TextField" style="-fx-text-fill: #004085;"/>
+            <Label text="• O Label superior é atualizado com o novo texto" style="-fx-text-fill: #004085;"/>
+            <Label text="• Tudo acontece em tempo real!" style="-fx-text-fill: #004085; -fx-font-weight: bold;"/>
+        </VBox>
+    </VBox>
+
+    <!-- Demonstração de código -->
+    <VBox spacing="10.0" style="-fx-background-color: #f8f9fa; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+        <Label text="📋 Código JavaFX equivalente:" style="-fx-font-weight: bold;"/>
+        <TextArea text="btnTrocarTexto.setOnAction(event -&gt; {
+    String texto = txtInput.getText();
+    lblTextoSuperior.setText(&quot;Você digitou: &quot; + texto);
+});" editable="false" prefRowCount="4" wrapText="true" style="-fx-font-family: 'Courier New'; -fx-font-size: 12px;"/>
+    </VBox>
+</VBox>

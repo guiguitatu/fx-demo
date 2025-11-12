@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fxdemo.controllers.FXController"
+            fitToWidth="true"
+            style="-fx-background-color: #f8f9fa;">
+    <VBox spacing="20.0" style="-fx-background-color: #f8f9fa;">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+
+        <!-- Título -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="🎨 Componentes JavaFX Mais Utilizados" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Label text="Demonstração interativa dos principais componentes da biblioteca JavaFX" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+            <Separator/>
+        </VBox>
+
+        <!-- Barra de Status -->
+        <HBox spacing="10.0" style="-fx-background-color: #e9ecef; -fx-padding: 10; -fx-border-color: #dee2e6; -fx-border-radius: 3;">
+            <Label text="Status:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="lblStatus" text="Carregando..." style="-fx-text-fill: #007bff;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="btnDemonstracao" text="🚀 Demonstração" onAction="#onBtnDemonstracaoClick" style="-fx-background-color: #17a2b8; -fx-text-fill: white;"/>
+            <Button fx:id="btnLimpar" text="🧹 Limpar" onAction="#onBtnLimparClick" style="-fx-background-color: #6c757d; -fx-text-fill: white;"/>
+        </HBox>
+
+        <!-- 1. LABELS -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="📝 Labels" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <HBox spacing="20.0" alignment="CENTER_LEFT">
+                <VBox spacing="5.0">
+                    <Label text="Label Básico:"/>
+                    <Label fx:id="lblBasico" text="Este é um label simples"/>
+                </VBox>
+                <VBox spacing="5.0">
+                    <Label text="Label Estilizado:"/>
+                    <Label fx:id="lblStyled" text="Label com estilo personalizado"/>
+                </VBox>
+                <VBox spacing="5.0">
+                    <Label text="Resultado das Interações:"/>
+                    <Label fx:id="lblResultado" text="Aqui aparecerão os resultados das interações"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- 2. BUTTONS -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="🔘 Buttons" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <HBox spacing="15.0" alignment="CENTER_LEFT">
+                <Button fx:id="btnNormal" text="Botão Normal"/>
+                <Button fx:id="btnDisabled" text="Botão Desabilitado"/>
+                <Button fx:id="btnStyled" text="Botão Estilizado"/>
+            </HBox>
+        </VBox>
+
+        <!-- 3. TEXT INPUT CONTROLS -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="📝 Controles de Entrada de Texto" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <GridPane hgap="15.0" vgap="10.0">
+                <Label text="TextField:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtCampo" promptText="Digite algo..." GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="200.0"/>
+
+                <Label text="TextField com Prompt:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtComPrompt" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="200.0"/>
+
+                <Label text="Campo Somente Leitura:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtSomenteLeitura" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="200.0"/>
+
+                <Label text="PasswordField:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="pwdSenha" GridPane.rowIndex="3" GridPane.columnIndex="1" prefWidth="200.0"/>
+            </GridPane>
+            <VBox spacing="5.0">
+                <Label text="TextArea:"/>
+                <TextArea fx:id="txtArea" prefRowCount="3" wrapText="true"/>
+            </VBox>
+        </VBox>
+
+        <!-- 4. SELECTION CONTROLS -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="🎯 Controles de Seleção" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <HBox spacing="30.0" alignment="TOP_LEFT">
+                <VBox spacing="10.0">
+                    <Label text="ComboBox:" style="-fx-font-weight: bold;"/>
+                    <ComboBox fx:id="cmbOpcoes" prefWidth="150.0"/>
+                </VBox>
+                <VBox spacing="5.0">
+                    <Label text="CheckBoxes:" style="-fx-font-weight: bold;"/>
+                    <CheckBox fx:id="chkOpcao1" text="Opção 1"/>
+                    <CheckBox fx:id="chkOpcao2" text="Opção 2"/>
+                    <CheckBox fx:id="chkOpcao3" text="Opção 3"/>
+                </VBox>
+                <VBox spacing="5.0">
+                    <Label text="RadioButtons:" style="-fx-font-weight: bold;"/>
+                    <RadioButton fx:id="rbOpcao1" text="Opção A"/>
+                    <RadioButton fx:id="rbOpcao2" text="Opção B"/>
+                    <RadioButton fx:id="rbOpcao3" text="Opção C"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- 5. PROGRESS AND SLIDER -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="📊 Progresso e Controle deslizante" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <VBox spacing="15.0">
+                <HBox spacing="20.0" alignment="CENTER_LEFT">
+                    <VBox spacing="5.0">
+                        <Label text="ProgressBar:"/>
+                        <ProgressBar fx:id="progressBar" prefWidth="200.0"/>
+                    </VBox>
+                    <VBox spacing="5.0">
+                        <Label text="ProgressIndicator:"/>
+                        <ProgressIndicator fx:id="progressIndicator"/>
+                    </VBox>
+                </HBox>
+                <VBox spacing="5.0">
+                    <Label text="Slider (mova para alterar o progresso):"/>
+                    <Slider fx:id="slider" showTickLabels="true" showTickMarks="true" prefWidth="400.0"/>
+                </VBox>
+            </VBox>
+        </VBox>
+
+        <!-- 6. PICKERS -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="📅 Seletores de Data e Cor" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <HBox spacing="30.0" alignment="CENTER_LEFT">
+                <VBox spacing="5.0">
+                    <Label text="DatePicker:"/>
+                    <DatePicker fx:id="datePicker"/>
+                </VBox>
+                <VBox spacing="5.0">
+                    <Label text="ColorPicker:"/>
+                    <ColorPicker fx:id="colorPicker"/>
+                </VBox>
+                <VBox spacing="5.0">
+                    <Label text="Spinner:"/>
+                    <Spinner fx:id="spinner" prefWidth="100.0"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- 7. TABLEVIEW -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="📋 TableView" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <Label text="Clique em uma linha para ver o resultado:" style="-fx-font-style: italic;"/>
+            <TableView fx:id="tableView" prefHeight="150.0">
+                <columns>
+                    <TableColumn fx:id="colNome" text="Nome" prefWidth="150.0"/>
+                    <TableColumn fx:id="colIdade" text="Idade" prefWidth="80.0"/>
+                    <TableColumn fx:id="colCidade" text="Cidade" prefWidth="150.0"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- 8. LISTVIEW -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="📜 ListView" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <ListView fx:id="listView" prefHeight="120.0"/>
+        </VBox>
+
+        <!-- 9. ACCORDION E TABS -->
+        <HBox spacing="20.0" alignment="TOP_LEFT">
+            <!-- Accordion -->
+            <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;" HBox.hgrow="ALWAYS">
+                <Label text="📂 Accordion" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <Separator/>
+                <Accordion fx:id="accordion" prefWidth="300.0">
+                    <panes>
+                        <TitledPane fx:id="pane1" text="Painel 1">
+                            <Label text="Conteúdo do primeiro painel.&#10;Você pode colocar qualquer componente aqui."/>
+                        </TitledPane>
+                        <TitledPane fx:id="pane2" text="Painel 2">
+                            <VBox spacing="5.0">
+                                <Label text="Conteúdo do segundo painel:"/>
+                                <Button text="Botão no Accordion"/>
+                                <CheckBox text="Checkbox no Accordion"/>
+                            </VBox>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </VBox>
+
+            <!-- TabPane -->
+            <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;" HBox.hgrow="ALWAYS">
+                <Label text="📑 TabPane" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                <Separator/>
+                <TabPane fx:id="tabPane" prefWidth="300.0" prefHeight="120.0">
+                    <tabs>
+                        <Tab fx:id="tab1" text="Aba 1" closable="false">
+                            <Label text="Conteúdo da primeira aba"/>
+                        </Tab>
+                        <Tab fx:id="tab2" text="Aba 2" closable="false">
+                            <VBox spacing="5.0">
+                                <Label text="Conteúdo da segunda aba:"/>
+                                <TextField promptText="Campo na aba"/>
+                            </VBox>
+                        </Tab>
+                        <Tab fx:id="tab3" text="Aba 3" closable="false">
+                            <Button text="Botão na terceira aba"/>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </VBox>
+        </HBox>
+
+        <!-- 10. MENUBAR E TOOLBAR -->
+        <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="🍽️ MenuBar e ToolBar" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Separator/>
+            <MenuBar fx:id="menuBar">
+                <menus>
+                    <Menu fx:id="menuArquivo" text="Arquivo">
+                        <items>
+                            <MenuItem fx:id="menuItemNovo" text="Novo"/>
+                            <MenuItem fx:id="menuItemAbrir" text="Abrir"/>
+                            <MenuItem fx:id="menuItemSalvar" text="Salvar"/>
+                        </items>
+                    </Menu>
+                    <Menu fx:id="menuEditar" text="Editar">
+                        <items>
+                            <MenuItem text="Copiar"/>
+                            <MenuItem text="Colar"/>
+                        </items>
+                    </Menu>
+                    <Menu fx:id="menuAjuda" text="Ajuda">
+                        <items>
+                            <MenuItem text="Sobre"/>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+            <ToolBar fx:id="toolBar">
+                <items>
+                    <Button text="🔧"/>
+                    <Button text="💾"/>
+                    <Separator fx:id="separator"/>
+                    <Button text="🔍"/>
+                    <Button text="⚙️"/>
+                </items>
+            </ToolBar>
+        </VBox>
+
+        <!-- Rodapé -->
+        <VBox spacing="10.0" style="-fx-background-color: #e9ecef; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+            <Label text="✅ Demonstração Completa dos Componentes JavaFX" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Label text="Esta tela demonstra os componentes mais utilizados do JavaFX com exemplos interativos e funcionais." style="-fx-text-fill: #7f8c8d;"/>
+            <Label text="Experimente clicar, digitar e interagir com todos os componentes!" style="-fx-text-fill: #28a745; -fx-font-style: italic;"/>
+        </VBox>
+    </VBox>
+</ScrollPane>
