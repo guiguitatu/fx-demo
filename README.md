@@ -4,6 +4,7 @@
 [![JavaFX](https://img.shields.io/badge/JavaFX-21-blue.svg)](https://openjfx.io/)
 [![SQLite](https://img.shields.io/badge/SQLite-3.44.1.0-green.svg)](https://www.sqlite.org/)
 [![Maven](https://img.shields.io/badge/Maven-3.9.0-orange.svg)](https://maven.apache.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Um sistema desktop moderno desenvolvido em JavaFX para gerenciamento de produtos com suporte a múltiplas formas de persistência de dados (SQLite e CSV).
 
@@ -67,7 +68,7 @@ FXdemo/
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/SEU_USERNAME/FXdemo.git
+   git clone https://github.com/guiguitatu/FXdemo.git
    cd FXdemo
    ```
 
@@ -194,7 +195,34 @@ Demonstra diferentes formas de conectar ações a botões, com feedback visual l
 
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está sob a licença MIT. Veja o arquivo [`LICENSE.md`](LICENSE.md) para mais detalhes.
+
+### Termos da Licença MIT
+
+- ✅ **Uso gratuito**: Para fins pessoais e comerciais
+- ✅ **Modificação**: Você pode modificar e distribuir o código
+- ✅ **Distribuição**: Inclusão em projetos proprietários permitida
+- ✅ **Sem restrições**: Uso irrestrito do software
+
+**Apenas mantenha o aviso de copyright em todas as cópias.**
+
+## 📁 Estrutura do Projeto
+
+```
+FXdemo/
+├── src/main/java/...          # Código fonte Java
+├── src/main/resources/...      # Arquivos FXML e recursos
+├── target/...                  # Arquivos compilados (ignorados)
+├── .gitignore                  # Arquivos ignorados pelo Git
+├── LICENSE.md                  # Licença MIT
+├── README.md                   # Esta documentação
+├── DOCUMENTACAO.md            # Documentação técnica completa
+├── EXPLICACAO.md              # Explicação da arquitetura
+├── EXPLICACAOFX.md            # Documentação da tela FX
+├── EXECUTAR.md                # Guia de execução
+├── pom.xml                    # Configuração Maven
+└── run.bat                    # Script de execução
+```
 
 ## 👨‍💻 Autor
 
