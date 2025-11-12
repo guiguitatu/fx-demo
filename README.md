@@ -226,7 +226,7 @@ FXdemo/
 
 ## 👨‍💻 Autor
 
-**Guilherme** - *Desenvolvimento inicial* - [Seu GitHub](https://github.com/SEU_USERNAME)
+**Guilherme** - *Desenvolvimento inicial* - [Seu GitHub](https://github.com/guiguitatu)
 
 ## 🙏 Agradecimentos
 
